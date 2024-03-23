@@ -10,7 +10,7 @@ favicon = '🎮'
 # Definir o favicon
 st.set_page_config(page_title='Fifa', page_icon=favicon, layout="wide")
 
-data_base = r'C:\Estudos\Git e GitHub\3_repositorio_estudos\1_Python\2_Trilha_Python_Office\2_3_Criando_Aplicativos_Web_com_Streamlit\1_Arquivos_do_Curso\Projeto Streamlit FIFA\datasets\CLEAN_FIFA23_official_data.csv'
+data_base = r'C:\Estudos\Git e GitHub\4_repositorio_aplicacoes\3_Analise_Fifa\datasets\CLEAN_FIFA23_official_data.csv'
 
 @st.cache_data
 def carregar_dados():
