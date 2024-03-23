@@ -14,12 +14,12 @@ st.set_page_config(page_title='Fifa', page_icon=favicon, layout="wide")
 
 @st.cache_data
 def carregar_dados():
-    data_base = pd.read_csv('3_Analise_Fifa/datasets/CLEAN_FIFA23_official_data.csv')
+    data_base = pd.read_csv('CLEAN_FIFA23_official_data.csv', index_col=0)
     return data_base
 
 
 if "data" not in st.session_state:
-    df_data = pd.read_csv(carregar_dados(), index_col=0)
+    df_data = carregar_dados()
     df_data = df_data[df_data["Contract Valid Until"] >= datetime.today().year]
     df_data = df_data[df_data["Value(£)"] > 0]
     df_data = df_data.sort_values(by="Overall", ascending=False)
