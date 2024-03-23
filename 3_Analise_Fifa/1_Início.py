@@ -14,7 +14,7 @@ st.set_page_config(page_title='Fifa', page_icon=favicon, layout="wide")
 
 @st.cache_data
 def carregar_dados():
-    data_base = pd.read_csv('datasets/CLEAN_FIFA23_official_data.csv')
+    data_base = pd.read_csv('4_repositorio_aplicacoes\3_Analise_Fifa\datasets\CLEAN_FIFA23_official_data.csv')
     return data_base
 
 
