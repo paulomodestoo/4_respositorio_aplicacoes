@@ -10,7 +10,7 @@ favicon = '🎮'
 # Definir o favicon
 st.set_page_config(page_title='Fifa', page_icon=favicon, layout="wide")
 
-data_base = r'datasets\CLEAN_FIFA23_official_data.csv'
+data_base = r'CLEAN_FIFA23_official_data.csv'
 
 @st.cache_data
 def carregar_dados():
