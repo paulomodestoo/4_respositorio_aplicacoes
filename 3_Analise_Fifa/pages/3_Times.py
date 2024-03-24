@@ -8,12 +8,15 @@ favicon = '🎮'
 # Definir o favicon
 st.set_page_config(page_title='Fifa', page_icon=favicon, layout="wide")
 
+
 df_data = st.session_state["data"]
 
 clubes = df_data["Club"].value_counts().index
 clube = st.sidebar.selectbox("Clube", clubes)
 
 df_filtrado = df_data[(df_data["Club"] == clube)].set_index("Name")
+
+st.sidebar.markdown('Desenvolvido por [Paulo Modesto.](https://www.linkedin.com/in/paulo-modesto/)')
 
 st.image(df_filtrado.iloc[0]["Club Logo"])
 st.markdown(f'## {clube}')

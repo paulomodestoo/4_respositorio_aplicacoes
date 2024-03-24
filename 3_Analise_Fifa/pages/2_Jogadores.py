@@ -17,6 +17,7 @@ df_jogadores = df_data[(df_data["Club"] == clube)]
 jogadores = df_jogadores["Name"].value_counts().index
 jogador = st.sidebar.selectbox("Jogador", jogadores)
 
+st.sidebar.markdown('Desenvolvido por [Paulo Modesto.](https://www.linkedin.com/in/paulo-modesto/)')
 
 estatistica_jogador = df_data[df_data["Name"] == jogador].iloc[0]
 st.image(estatistica_jogador["Photo"])
