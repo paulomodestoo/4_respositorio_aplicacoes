@@ -8,8 +8,12 @@ requisicao = requests.get(url)
 
 pagina = bs4.BeautifulSoup(requisicao.text, "html.parser" )
 
-# elemento "a" e a classe ""  -    n0jPhd ynAwRc MBeuO nDgy9d
+# elemento "a" e a classe ""  -   class_='OSrXXb rbYSKb LfVVr'
 
-lista_noticias = pagina.find_all("h3", class_="zBAuLc l97dzf")
-
-print(lista_noticias)
+lista_noticias = pagina.find_all("a")
+for noticia in lista_noticias:
+    if "BNeawe vvjwJb AP7Wnd" in str(noticia):
+        print("============")
+        print(str(noticia.find("h3")).split(">")[2].split("<")[0])
+        print(str(noticia.get("href")).split("/url?q=")[1])
+        print("")
